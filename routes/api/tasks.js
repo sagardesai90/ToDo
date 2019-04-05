@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-//Item Model
+// Model
 const Task = require('../../models/Task')
 
 //@route GET api/tasks

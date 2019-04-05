@@ -2,19 +2,17 @@ import React, { Component } from 'react';
 import { Container, ListGroup, ListGroupItem, Button } from 'reactstrap';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import uuid from 'uuid';
+import { connect } from 'react-redux';
+import { getTasks } from '../actions/taskActions';
+import PropTypes from 'prop-types';
 
 class TaskList extends Component {
-    state = {
-        tasks: [
-            { id: uuid(), name: 'Eggs'},
-            { id: uuid(), name: 'Milk'},
-            { id: uuid(), name: 'Juice'},
-            { id: uuid(), name: 'Water'}
-        ]
+    componentDidMount() {
+        this.props.getTasks();
     }
 
-    render () {
-        const { tasks } = this.state;
+    render () {        
+        const { tasks } = this.props.task;
         return(
             <Container>
                 <Button
@@ -55,4 +53,13 @@ class TaskList extends Component {
     }
 }
 
-export default TaskList;
+TaskList.propTypes = {
+    getTasks: PropTypes.func.isRequired,
+    task: PropTypes.object.isRequired
+}
+
+const mapStateToProps = (state) => ({
+    task: state.task
+})
+
+export default connect(mapStateToProps, { getTasks })(TaskList);
