@@ -21,6 +21,16 @@ export default function(state = initialState, action){
       return {
         ...state
       }
+    case ADD_TASKS:
+      return {
+        ...state,
+        tasks: [action.payload, ...state.tasks]
+      }
+    case DELETE_TASK:
+      return {
+        ...state,
+        tasks: state.tasks.filter(task => task.id !== action.payload)
+      }
     default:
       return state;
   }
