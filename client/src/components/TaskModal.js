@@ -12,7 +12,6 @@ import {
 import { connect } from 'react-redux';
 import { addTask } from '../actions/taskActions';
 import PropTypes from 'prop-types';
-import uuid from 'uuid';
 class TaskModal extends Component {
     state = {
         modal: false,
@@ -33,7 +32,6 @@ class TaskModal extends Component {
         e.preventDefault();
 
         const newTask = {
-            id: uuid(),
             name: this.state.name
         }
 
