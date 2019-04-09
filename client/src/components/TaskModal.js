@@ -12,12 +12,15 @@ import {
 import { connect } from 'react-redux';
 import { addTask } from '../actions/taskActions';
 import PropTypes from 'prop-types';
+
 class TaskModal extends Component {
     state = {
         modal: false,
         name: ''
     }
-
+    static propTypes = {
+        isAuthenticated: PropTypes.bool
+    }
     toggle = () => {
         this.setState({
             modal: !this.state.modal
@@ -45,11 +48,14 @@ class TaskModal extends Component {
 render() {
     return(
         <div>
+            { this.props.isAuthenticated ? 
             <Button
             color="dark"
             style={{marginBottom: '2rem'}}
             onClick={this.toggle}
-            >Add Task</Button>
+            >Add Task</Button> :
+            <h4 className="mb-3 ml-4">Please login or register to add tasks.</h4>}
+            
             <Modal
             isOpen={this.state.modal}
             toggle={this.toggle}
@@ -81,7 +87,8 @@ render() {
 }
 
 const mapStateToProps = state => ({
-    item: state.item
+    item: state.item,
+    isAuthenticated: state.auth.isAuthenticated
 })
 
 
