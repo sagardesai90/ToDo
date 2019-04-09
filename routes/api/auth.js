@@ -17,7 +17,7 @@ router.post('/', (req, res) => {
 
     //simple validation
     if(!email || !password){
-        return res.status(400).json({msg: 'please enter all fields'});
+        return res.status(400).json({msg: 'Please enter all fields'});
     }
     
     //check for existing user
@@ -28,7 +28,7 @@ router.post('/', (req, res) => {
             //validate password
             bcrypt.compare(password, user.password)
                 .then(isMatch => {
-                    if(!isMatch) return res.status(400).json({msg: 'invaid credentials'});
+                    if(!isMatch) return res.status(400).json({msg: 'Invaid credentials'});
 
                     jwt.sign(
                         { id: user.id },
