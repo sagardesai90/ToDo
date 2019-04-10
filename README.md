@@ -11,12 +11,18 @@ npm --version: 6.7.0
 
 node --version: v11.10.1
 
+From the /client folder, you can run:
+```
+npm install - installs front end app
+```
+
 From the root, you can run:
 ```
 npm install
 npm run server - runs the backend
 npm run dev - runs the backend and client servers concurrently
 ```
+Once
 
 Runs the app in development mode. Open http://localhost:3000 to view it in the browser!
 
