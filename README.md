@@ -6,7 +6,9 @@ This is a simple to do app with a react front end, and noSQL back end.
 
 ### Requirements
 - NPM or Yarn
+
 npm --version: 6.7.0
+
 node --version: v11.10.1
 
 From the root, you can run:
