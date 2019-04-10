@@ -69,11 +69,13 @@ render() {
                             type="text"
                             name="name"
                             id="task"
+                            className="add-task"
                             placeholder="add to your todos"
                             onChange={this.onChange}
                             />
                             <Button
                                 color="dark"
+                                className="addtask"
                                 style={{marginTop: "2rem"}}
                                 block
                             >Add Task</Button>
