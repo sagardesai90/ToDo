@@ -16,6 +16,13 @@ describe('Login using the credentials below, and logout.', function() {
 
       cy.get('.password').click()
 
+      cy.contains('Add Task')
+      .click()
+      .get('.add-task')
+      .type('Buy some groceries')
+      .should('have.value', 'Buy some groceries')
+      .get('.addtask').click()
+
       cy.get('.logout').click()
     })
 
