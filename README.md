@@ -1,4 +1,5 @@
 # To Do App 
+This is a simple to do app with a react front end, and noSQL back end.
 
 ## Available Scripts
 
@@ -13,7 +14,7 @@ npm run server - runs the backend
 npm run dev - runs the backend and client servers concurrently
 ```
 
-Runs the app in the development mode. Open http://localhost:3000 to view it in the browser!
+Runs the app in development mode. Open http://localhost:3000 to view it in the browser!
 
 ## Endpoint Documentation
 
