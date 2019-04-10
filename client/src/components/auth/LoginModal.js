@@ -98,7 +98,7 @@ render() {
                             id="email"
                             placeholder="Email"
                             onChange={this.onChange}
-                            className="mb-3"
+                            className="mb-3 action-email"
                             />
                         <Label for="name">Password</Label>
                         <Input
@@ -107,9 +107,10 @@ render() {
                             id="password"
                             placeholder="Password"
                             onChange={this.onChange}
-                            className="mb-3"
+                            className="mb-3 action-password"
                             />
                             <Button
+                                className="password"
                                 color="dark"
                                 style={{marginTop: "2rem"}}
                                 block
