@@ -45,3 +45,11 @@ Endpoint: http://localhost:5000/api/tasks
 Type: GET
 
 This endpoint gets all a users tasks. Protected route.
+
+## Testing
+
+From the root, you can run:
+```
+npm run cypress:open - runs tests
+```
+

@@ -8,7 +8,8 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "cypress:open": "cypress open"
   },
   "author": "",
   "license": "MIT",
@@ -21,6 +22,7 @@
     "mongoose": "^5.4.21"
   },
   "devDependencies": {
+    "cypress": "^3.2.0",
     "nodemon": "^1.18.10"
   }
 }
